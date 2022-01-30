@@ -1,0 +1,41 @@
+@mixin flexbox {
+    display:flex;
+}
+
+@mixin justify-content($direction){
+    justify-content: $direction;
+}
+
+@mixin align-items($direction){
+    align-items: $direction;
+}
+
+@mixin align-self($direction){
+    align-items: $direction;
+}
+
+@mixin justify-self($direction){
+    justify-self: $direction;
+
+}
+
+@mixin flex-direction($direction){
+    flex-direction: $direction;
+
+}
+
+@mixin flexbox-custom($direction:'',$justify,$align,$gap:'0px') {
+    --gap:#{$gap};
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap:var(--gap);
+
+
+    @if $direction == column {
+        flex-direction:$direction;
+    }
+
+}
+
+

@@ -1,0 +1,45 @@
+:root{
+    // COLORS
+    --primary:#{$primary-color};
+    --secondary:#{$secondary-color};
+    --third:#{$third-color};
+    --fourth:#{$fourth-color};
+    --black:#{$black};
+    // FONTS
+    --familyReg:#{$family-regular};
+    // SPECS
+    --alpha:.25;
+    --regRadius:#{$radius};
+    --regBoxshadow: 0 3px 6px rgba(0,0,0,var(--alpha));
+    --fakeBold: 0 0 0.88px var(--primary);
+    --transitionStandard: all 0.25s ease-in-out;
+}
+
+
+body {
+    @include reset();
+    width:100%;
+    height:100%;
+    @include flexbox-custom(row,center,center);
+    flex-wrap:wrap;
+    font:{
+        family: $family-regular;
+        size: $text-size;
+    }
+    color:$text-default-color;
+    background:$grey-blue;
+  
+}
+
+.wrapper{
+    --wrapper:#{$desktop-bk};
+    max-width:var(--wrapper);
+    margin:5vh auto;
+
+    @media all and (max-width:#{$mobile-bk}) {
+        --wrapper:100%;
+        width:var(--wrapper);
+    }
+}
+
+

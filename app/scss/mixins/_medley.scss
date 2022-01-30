@@ -1,8 +1,7 @@
 
 @mixin reset(){
-
     padding:0;
     margin:0;
-    overscroll-behavior: smooth;
+    scroll-behavior: smooth;
 
 }

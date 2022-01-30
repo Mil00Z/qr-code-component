@@ -17,6 +17,7 @@
 
 
 body {
+    --alpha:.65;
     @include reset();
     width:100%;
     height:100%;
@@ -27,7 +28,7 @@ body {
         size: $text-size;
     }
     color:$text-default-color;
-    background:$grey-blue;
+    background:linear-gradient(to left, rgba($grey-blue,var(--alpha)) 0%, rgba($grey-blue,var(--alpha)) 100%);
   
 }
 
